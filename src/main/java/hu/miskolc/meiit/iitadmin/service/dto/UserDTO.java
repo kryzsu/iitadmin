@@ -12,7 +12,7 @@ import javax.validation.constraints.*;
  * A DTO representing a user, with his authorities.
  */
 public class UserDTO {
-    private String id;
+    private Long id;
 
     @NotBlank
     @Pattern(regexp = Constants.LOGIN_REGEX)
@@ -67,11 +67,11 @@ public class UserDTO {
         this.authorities = user.getAuthorities().stream().map(Authority::getName).collect(Collectors.toSet());
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

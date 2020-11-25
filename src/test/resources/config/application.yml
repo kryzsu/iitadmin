@@ -18,10 +18,10 @@ spring:
     # Uncomment the following line to enable tests against production database type rather than H2, using Testcontainers
     #active: testcontainers
   application:
-    name: iitadmin
+    name: iitAdmin
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:iitadmin;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:iitAdmin;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     name:
     username:
     password:
@@ -57,24 +57,17 @@ spring:
     basename: i18n/messages
   task:
     execution:
-      thread-name-prefix: iitadmin-task-
+      thread-name-prefix: iit-admin-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: iitadmin-scheduling-
+      thread-name-prefix: iit-admin-scheduling-
       pool:
         size: 1
   thymeleaf:
     mode: HTML
-  # Allow SecurityConfiguration to initialize w/o specifying an empty issuer-uri is OK
-  security:
-    oauth2:
-      client:
-        provider:
-          oidc:
-            issuer-uri: http://DO_NOT_CALL:9080/auth/realms/jhipster
 
 server:
   port: 10344
@@ -88,7 +81,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'iitadminApp'
+    name: 'iitAdminApp'
   logging:
     # To test json console appender
     use-json-format: false
@@ -100,6 +93,13 @@ jhipster:
   mail:
     from: test@localhost
     base-url: http://127.0.0.1:8080
+  security:
+    authentication:
+      jwt:
+        # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
+        base64-secret: M2M3OWYzOTRlNWRmOTk4NzU3NmQzNjM2YTJlMDc5MDEwOWIzNDk3MmNlM2FjNzBiNzBhODAzZmI2MDNkMGNhN2Y5ZTNiMWY3ZTFmZjFlYmU0MzQ1ZWZmNTE5ZDJjNDJhMjJiZjFlYzkyMDc5MTczNDM4MzZlNTU4ZTg4ODA0MTA=
+        # Token is valid 24 hours
+        token-validity-in-seconds: 86400
   metrics:
     logs: # Reports metrics in the logs
       enabled: true

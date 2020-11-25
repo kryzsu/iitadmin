@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="milestone">
+            <h2><span jhiTranslate="iitAdminApp.milestone.detail.title">Milestone</span> {{ milestone.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="iitAdminApp.milestone.description">Description</span></dt>
+                <dd>
+                    <span>{{ milestone.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="iitAdminApp.milestone.deadline">Deadline</span></dt>
+                <dd>
+                    <span>{{ milestone.deadline }}</span>
+                </dd>
+                <dt><span jhiTranslate="iitAdminApp.milestone.course">Course</span></dt>
+                <dd>
+                    <div *ngIf="milestone.course">
+                        <a [routerLink]="['/course', milestone.course?.id, 'view']">{{ milestone.course?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/milestone', milestone.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -47,6 +47,11 @@ public class CacheConfiguration {
             createCache(cm, hu.miskolc.meiit.iitadmin.domain.User.class.getName());
             createCache(cm, hu.miskolc.meiit.iitadmin.domain.Authority.class.getName());
             createCache(cm, hu.miskolc.meiit.iitadmin.domain.User.class.getName() + ".authorities");
+            createCache(cm, hu.miskolc.meiit.iitadmin.domain.Milestone.class.getName());
+            createCache(cm, hu.miskolc.meiit.iitadmin.domain.Milestone.class.getName() + ".artifacts");
+            createCache(cm, hu.miskolc.meiit.iitadmin.domain.Artifact.class.getName());
+            createCache(cm, hu.miskolc.meiit.iitadmin.domain.Course.class.getName());
+            createCache(cm, hu.miskolc.meiit.iitadmin.domain.Course.class.getName() + ".milestones");
             // jhipster-needle-ehcache-add-entry
         };
     }

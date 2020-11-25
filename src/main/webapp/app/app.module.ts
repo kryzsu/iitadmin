@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import './vendor';
-import { IitadminSharedModule } from 'app/shared/shared.module';
-import { IitadminCoreModule } from 'app/core/core.module';
-import { IitadminAppRoutingModule } from './app-routing.module';
-import { IitadminHomeModule } from './home/home.module';
-import { IitadminEntityModule } from './entities/entity.module';
+import { IitAdminSharedModule } from 'app/shared/shared.module';
+import { IitAdminCoreModule } from 'app/core/core.module';
+import { IitAdminAppRoutingModule } from './app-routing.module';
+import { IitAdminHomeModule } from './home/home.module';
+import { IitAdminEntityModule } from './entities/entity.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { MainComponent } from './layouts/main/main.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
@@ -18,14 +18,14 @@ import { ErrorComponent } from './layouts/error/error.component';
 @NgModule({
   imports: [
     BrowserModule,
-    IitadminSharedModule,
-    IitadminCoreModule,
-    IitadminHomeModule,
+    IitAdminSharedModule,
+    IitAdminCoreModule,
+    IitAdminHomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
-    IitadminEntityModule,
-    IitadminAppRoutingModule,
+    IitAdminEntityModule,
+    IitAdminAppRoutingModule,
   ],
   declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
   bootstrap: [MainComponent],
 })
-export class IitadminAppModule {}
+export class IitAdminAppModule {}
