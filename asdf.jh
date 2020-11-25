@@ -1,0 +1,35 @@
+
+application {
+  config {
+    baseName iitAdmin,
+    applicationType monolith,
+    packageName hu.miskolc.meiit.iitadmin,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework angular
+  }
+  entities *
+}
+
+entity Milestone {
+	description String required
+    deadline LocalDate required
+}
+
+entity Artifact {
+	name String required
+    data Blob required
+}
+
+entity Course {
+	name String required
+}
+
+relationship OneToMany {
+  Course to Milestone
+}
+
+relationship OneToMany {
+  Milestone to Artifact
+}
+    
