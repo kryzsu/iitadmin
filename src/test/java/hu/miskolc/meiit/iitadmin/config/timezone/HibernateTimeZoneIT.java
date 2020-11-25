@@ -3,8 +3,7 @@ package hu.miskolc.meiit.iitadmin.config.timezone;
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import hu.miskolc.meiit.iitadmin.IitadminApp;
-import hu.miskolc.meiit.iitadmin.config.TestSecurityConfiguration;
+import hu.miskolc.meiit.iitadmin.IitAdminApp;
 import hu.miskolc.meiit.iitadmin.repository.timezone.DateTimeWrapper;
 import hu.miskolc.meiit.iitadmin.repository.timezone.DateTimeWrapperRepository;
 import java.time.*;
@@ -21,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Integration tests for the ZoneId Hibernate configuration.
  */
-@SpringBootTest(classes = { IitadminApp.class, TestSecurityConfiguration.class })
+@SpringBootTest(classes = IitAdminApp.class)
 public class HibernateTimeZoneIT {
     @Autowired
     private DateTimeWrapperRepository dateTimeWrapperRepository;

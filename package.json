@@ -1,7 +1,7 @@
 {
-  "name": "iitadmin",
+  "name": "iit-admin",
   "version": "0.0.1-SNAPSHOT",
-  "description": "Description for iitadmin",
+  "description": "Description for iitAdmin",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

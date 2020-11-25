@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { IitadminSharedModule } from 'app/shared/shared.module';
+import { IitAdminSharedModule } from 'app/shared/shared.module';
 
 import { MetricsComponent } from './metrics.component';
 
 import { metricsRoute } from './metrics.route';
 
 @NgModule({
-  imports: [IitadminSharedModule, RouterModule.forChild([metricsRoute])],
+  imports: [IitAdminSharedModule, RouterModule.forChild([metricsRoute])],
   declarations: [MetricsComponent],
 })
 export class MetricsModule {}

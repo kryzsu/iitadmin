@@ -1,0 +1,36 @@
+{
+  "name": "Artifact",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "data",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "milestone",
+      "otherEntityRelationshipName": "artifact",
+      "relationshipName": "milestone",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201125213625",
+  "entityTableName": "artifact",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["iitAdmin"]
+}

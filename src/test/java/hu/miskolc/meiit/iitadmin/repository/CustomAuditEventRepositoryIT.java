@@ -3,9 +3,8 @@ package hu.miskolc.meiit.iitadmin.repository;
 import static hu.miskolc.meiit.iitadmin.repository.CustomAuditEventRepository.EVENT_DATA_COLUMN_MAX_LENGTH;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import hu.miskolc.meiit.iitadmin.IitadminApp;
+import hu.miskolc.meiit.iitadmin.IitAdminApp;
 import hu.miskolc.meiit.iitadmin.config.Constants;
-import hu.miskolc.meiit.iitadmin.config.TestSecurityConfiguration;
 import hu.miskolc.meiit.iitadmin.config.audit.AuditEventConverter;
 import hu.miskolc.meiit.iitadmin.domain.PersistentAuditEvent;
 import java.time.Instant;
@@ -27,7 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Integration tests for {@link CustomAuditEventRepository}.
  */
-@SpringBootTest(classes = { IitadminApp.class, TestSecurityConfiguration.class })
+@SpringBootTest(classes = IitAdminApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIT {
     @Autowired

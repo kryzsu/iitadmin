@@ -1,0 +1,25 @@
+{
+  "iitAdminApp": {
+    "milestone": {
+      "home": {
+        "title": "Milestones",
+        "createLabel": "Créer un nouveau Milestone",
+        "createOrEditLabel": "Créer ou éditer un Milestone",
+        "notFound": "Aucun Milestone trouvé"
+      },
+      "created": "Un nouveau Milestone a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Milestone avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Milestone avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Milestone {{ id }} ?"
+      },
+      "detail": {
+        "title": "Milestone"
+      },
+      "description": "Description",
+      "deadline": "Deadline",
+      "artifact": "Artifact",
+      "course": "Course"
+    }
+  }
+}

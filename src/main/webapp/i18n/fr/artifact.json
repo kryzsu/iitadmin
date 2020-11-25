@@ -1,0 +1,24 @@
+{
+  "iitAdminApp": {
+    "artifact": {
+      "home": {
+        "title": "Artifacts",
+        "createLabel": "Créer un nouveau Artifact",
+        "createOrEditLabel": "Créer ou éditer un Artifact",
+        "notFound": "Aucun Artifact trouvé"
+      },
+      "created": "Un nouveau Artifact a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Artifact avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Artifact avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Artifact {{ id }} ?"
+      },
+      "detail": {
+        "title": "Artifact"
+      },
+      "name": "Name",
+      "data": "Data",
+      "milestone": "Milestone"
+    }
+  }
+}
